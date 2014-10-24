@@ -8,6 +8,10 @@ e12pack automates the process of packaging multiple folders to pbos and moving t
 $ e12pack.exe -pack="C:\Users\blang\mymod"
 ```
 
+Or better install the shell extension by executing `installShellExt.bat` as Administrator.
+After that, right-click on the `mymod` folder and choose `E12Pack` to execute the command above.
+
+
 The directory structure looks like this:
 
 ```
