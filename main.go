@@ -10,6 +10,7 @@ import (
 	"path/filepath"
 	"strings"
 	"sync"
+	"errors"
 )
 
 var PACK_WORKER = 10
@@ -165,6 +166,10 @@ func readMetaFile(name string) ([]string, error) {
 
 	b, err := ioutil.ReadAll(file)
 	if err != nil {
+		return nil, err
+	}
+	if len(b) == 0 {
+		err := errors.New(".e12pack file is empty")
 		return nil, err
 	}
 	lines := strings.Split(string(b), "\n")
